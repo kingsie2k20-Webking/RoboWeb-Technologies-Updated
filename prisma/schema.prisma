@@ -1,0 +1,43 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model JobPost {
+  id          String   @id @default(cuid())
+  title       String
+  department  String
+  location    String
+  type        String
+  description String
+  imageUrl    String
+  email       String
+  date        String
+  createdAt   DateTime @default(now())
+}
+
+model HackathonPost {
+  id          String   @id @default(cuid())
+  title       String
+  date        String
+  location    String
+  description String
+  imageUrl    String
+  registerUrl String
+  createdAt   DateTime @default(now())
+}
+
+model PastHackathon {
+  id          String   @id @default(cuid())
+  title       String
+  date        String
+  location    String
+  description String
+  images      String[]
+  winners     String
+  createdAt   DateTime @default(now())
+}
