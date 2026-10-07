@@ -23,6 +23,13 @@ export async function POST(request: Request) {
 
     return NextResponse.json(newJob, { status: 201 })
   } catch (error) {
-    return NextResponse.json({ error: "Failed to create job" }, { status: 500 })
-  }
+  console.error("Prisma job update error:", error)
+
+  return NextResponse.json(
+    {
+      error: error instanceof Error ? error.message : "Failed to update job",
+    },
+    { status: 500 }
+  )
+}
 }

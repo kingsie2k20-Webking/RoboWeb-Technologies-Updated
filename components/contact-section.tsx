@@ -91,7 +91,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Business Hours</p>
                     <p className="text-sm font-semibold text-white">
-                      10.30 AM - 7 PM
+                      10 AM - 7 PM
                     </p>
                   </div>
                 </div>

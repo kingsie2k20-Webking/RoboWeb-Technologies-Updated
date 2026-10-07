@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="hidden lg:block shrink-0">
             <Link
               href="#contact"
-              className="bg-blue-600 hover:bg-blue-500 text-white text-xs xl:text-sm font-medium px-4 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/20"
+             className="bg-blue-600 hover:bg-blue-500 text-white text-sm xl:text-base font-medium px-4 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/20"
             >
               Contact Us
             </Link>
